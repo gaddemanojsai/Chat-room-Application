@@ -1,0 +1,31 @@
+<!--Now we are extending the base.html webpages to this login.html-->
+{% extends "base.html" %}
+
+<!--We are setting the block title for this page-->
+<!--Block title will be the Home for this webpage-->
+{% block title %}Home{% endblock %}
+
+<!--Now we are adding the block content part from here to the base.html part-->
+
+{% block content %}
+
+<p id="msg_testing"></p>
+<button type="button" class="btn btn-link" onclick="window.location.reload()" id="button2">Update Threads</button>
+<!--<button class="btn btn-outline-secondary" onclick="window.location.reload()" id="button2">Update Threads</button>-->
+<div class="input-group mb-3">
+<!--    We are taking input message from the user -->
+
+      <input  type="text" class="form-control" placeholder="Typing..."  aria-label="Message" id="message_type">
+<!--    appending the buttons to the message box -->
+      <div class="input-group-append">
+
+<!--            <button class="btn btn-outline-secondary" onclick="window.location.reload()" id="button2">Update Threads</button>-->
+<!--          this button will send the message entered by the user to the server-->
+<!--          <button  class="btn btn-outline-secondary" type="button"  id="sending_button" >Send</button>-->
+          <button type="button" class="btn btn-secondary" id="sending_button" >Send</button>
+
+      </div>
+
+</div>
+
+{% endblock %}

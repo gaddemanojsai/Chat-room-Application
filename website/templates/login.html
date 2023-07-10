@@ -1,0 +1,32 @@
+<!--Now we are extending the base.html webpages to this login.html-->
+{% extends "base.html" %}
+
+<!--We are setting the block title for this page-->
+<!--Block title will be the Login for this webpage-->
+
+{% block title %}Login{% endblock %}
+
+<!--Now we are adding the block content part from here to the base.html part-->
+
+{% block content %}
+<!--Login page where user can login to the chatting window-->
+
+<form class="form-inline" action="#" method="POST">
+<!--  div block-->
+    <div class="form-group mb-2">
+      <label for="staticName2" class="sr-only">Name</label>
+<!--      Taking input as the text for user name to show the identity-->
+      <input type="text" readonly class="form-control-plaintext" id="staticName2" value="Enter Your Name: ">
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+<!--      ENtering the name-->
+      <label for="inputName" class="sr-only">Enter Name: </label>
+<!--      Taking input from here-->
+      <input type="text" class="form-control" name="usernameinput" id="inputName" placeholder="First Name">
+    </div>
+<!--    clicking the submit button-->
+    <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+<!--We are linking the webpage with the index.js file-->
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
